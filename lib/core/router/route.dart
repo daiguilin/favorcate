@@ -1,3 +1,4 @@
+import 'package:favorcate/ui/pages/meal/meal.dart';
 import 'package:flutter/material.dart';
 import '../../ui/pages/main/main.dart';
 //import '../../ui/pages/home/home.dart';
@@ -5,7 +6,8 @@ import '../../ui/pages/main/main.dart';
 class DGLRouter {
   static final String initialRoute = DGLMainScreen.routeName;
   static final Map<String, WidgetBuilder> routes = {
-    DGLMainScreen.routeName: (ctx) => DGLMainScreen()
+    DGLMainScreen.routeName: (ctx) => DGLMainScreen(),
+    DGLMealScreen.routeName:(ctx)=>DGLMealScreen()
   };
 
   static final RouteFactory generateRoute = (settings) {

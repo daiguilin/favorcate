@@ -1,5 +1,6 @@
 import 'package:favorcate/core/model/category_model.dart';
 import 'package:flutter/material.dart';
+import 'meal_content.dart';
 class DGLMealScreen extends StatelessWidget {
   static const String routeName = "/meal";
   @override
@@ -8,9 +9,9 @@ class DGLMealScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(category.title),
-      ),
+      ) ,
       body: Center(
-        child: Text("meal"),
+        child: DGLMealContent(),
       ),
     );
   }

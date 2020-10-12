@@ -19,7 +19,7 @@ class DGLJsonParse{
     for(var json in resultList){
       categories.add(DGLCategoryModel.fromJson(json));
     }
-    print(categories.runtimeType);
+//    print(categories.runtimeType);
 
     return categories;
   }

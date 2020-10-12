@@ -7,7 +7,7 @@ import 'package:favorcate/ui/shared/size_fit.dart';
 void main()  {
   runApp(
     ChangeNotifierProvider(
-      create: (ctx)=>MealViewModel(),
+      create: (ctx)=>DGLMealViewModel(),
       child: MyApp(),
     )
   );

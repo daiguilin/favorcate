@@ -1,9 +1,12 @@
+
+List<String> complexs = ["简单","中等","困难"];
 class DGLMealModel {
   String id;
   List<String> categories;
   String title;
   int affordability;
   int complexity;
+  String complex;
   String imageUrl;
   int duration;
   List<String> ingredients;
@@ -19,6 +22,7 @@ class DGLMealModel {
         this.title,
         this.affordability,
         this.complexity,
+        this.complex,
         this.imageUrl,
         this.duration,
         this.ingredients,
@@ -34,6 +38,7 @@ class DGLMealModel {
     title = json['title'];
     affordability = json['affordability'];
     complexity = json['complexity'];
+    complex=complexs[json['complexity']];
     imageUrl = json['imageUrl'];
     duration = json['duration'];
     ingredients = json['ingredients'].cast<String>();

@@ -8,7 +8,7 @@ class DGLMealViewModel extends ChangeNotifier{
   List<DGLMealModel> get meals{
     return _meals;
   }
-  MealViewModel(){
+  DGLMealViewModel(){
     DGLMealRequest.getMealData().then((res){
       _meals =res;
       notifyListeners();

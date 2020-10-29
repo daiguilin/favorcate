@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'initialize_items.dart';
+import '../home/home_drawer.dart';
 class DGLMainScreen extends StatefulWidget {
   static const String routeName = "/";
   @override
@@ -11,6 +12,7 @@ class _DGLMainScreenState extends State<DGLMainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer:DGLHomeDrawer() ,
       body: IndexedStack(
         index: _currentIndex,
         children: pages,

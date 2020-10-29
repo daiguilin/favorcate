@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:favorcate/core/extension/int_extension.dart';
+import '../filter/filter.dart';
 class DGLHomeDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,9 @@ class DGLHomeDrawer extends StatelessWidget {
             buildListTile(context,Icon(Icons.restaurant),"进度",(){
               Navigator.of(context).pop();
             }),
-            buildListTile(context,Icon(Icons.settings),"过滤",(){}),
+            buildListTile(context,Icon(Icons.settings),"过滤",(){
+              Navigator.of(context).pushNamed(DGLFilterScreen.routeName);
+            }),
           ],
         ),
       ),

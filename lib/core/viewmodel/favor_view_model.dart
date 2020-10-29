@@ -1,20 +1,16 @@
 import 'package:favorcate/core/model/meal_model.dart';
-import 'package:flutter/material.dart';
+import 'package:favorcate/core/viewmodel/base_view_model.dart';
 
-class DGLFavorViewModel extends ChangeNotifier{
-  List<DGLMealModel> _favorMeals = [];
+class DGLFavorViewModel extends BaseMealViewModel{
 
-  List<DGLMealModel> get favorMeals{
-    return _favorMeals;
-  }
 
   void addMeal(DGLMealModel meal){
-    _favorMeals.add(meal);
+    originMeals.add(meal);
     notifyListeners();
   }
 
   void removeMeal(DGLMealModel meal){
-    _favorMeals.remove(meal);
+    originMeals.remove(meal);
     notifyListeners();
   }
 
@@ -27,6 +23,6 @@ class DGLFavorViewModel extends ChangeNotifier{
   }
 
   bool  isFavor(DGLMealModel meal){
-    return _favorMeals.contains(meal);
+    return originMeals.contains(meal);
   }
 }
